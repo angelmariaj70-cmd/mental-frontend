@@ -1,0 +1,1 @@
+export const serverUrl= 'https://mental-backend-n3sp.onrender.com'
