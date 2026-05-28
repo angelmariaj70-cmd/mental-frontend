@@ -15,7 +15,8 @@ function Chat() {
 const query = new URLSearchParams(window.location.search);
 
 const role = query.get("role") || "patient";
-const roomId = query.get("room");
+// const roomId = query.get("room");
+const roomId = "room1";
   useEffect(() => {
     socket.emit("joinRoom", roomId);
 
