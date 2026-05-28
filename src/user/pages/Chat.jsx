@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://mental-backend-n3sp.onrender.com");
 
 function Chat() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const roomId = "room1";
+  // const roomId = "room1";
 
-  // 🔥 get role from URL
-  const query = new URLSearchParams(window.location.search);
-  const role = query.get("role") || "patient";
+  // // 🔥 get role from URL
+  // const query = new URLSearchParams(window.location.search);
+  // const role = query.get("role") || "patient";
+const query = new URLSearchParams(window.location.search);
 
+const role = query.get("role") || "patient";
+const roomId = query.get("room");
   useEffect(() => {
     socket.emit("joinRoom", roomId);
 
