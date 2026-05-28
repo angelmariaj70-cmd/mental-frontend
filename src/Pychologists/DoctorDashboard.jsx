@@ -203,7 +203,7 @@ const fetchDoctor = async () => {
                       <TableCell>
                         <Button
                           onClick={() =>
-                            navigate(`/chat?role=doctor&room=${item._id}`)
+                            navigate(`/chat?role=doctor&room=room1`)
                           }
                           className="bg-indigo-500"
                         >
